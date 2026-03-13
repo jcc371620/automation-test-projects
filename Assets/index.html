@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>作品集访问认证</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h3>请输入访问密码查看 Xmind 逻辑看板</h3>
+        <input type="password" id="pass">
+        <button onclick="checkPass()">确定</button>
+        <p id="msg" style="color: red;"></p>
+    </div>
+
+    <script>
+        function checkPass() {
+            var p = document.getElementById("pass").value;
+            // 在这里设置你的密码，比如 123456
+            if (p === "88888888") {
+                window.location.href = "./Assets/B2B.pdf";
+            } else {
+                document.getElementById("msg").innerText = "密码错误，请联系作者获取。";
+            }
+        }
+    </script>
+</body>
+</html>
