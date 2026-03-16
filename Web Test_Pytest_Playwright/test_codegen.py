@@ -5,6 +5,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
+    page = context.new_page()
     page.goto("https://www.google.com/?zx=1773656693225&no_sw_cr=1")
     page.get_by_role("combobox", name="搜索").click()
     page.get_by_role("combobox", name="搜索").fill("playwright")
@@ -26,3 +27,5 @@ def run(playwright: Playwright) -> None:
 
 with sync_playwright() as playwright:
     run(playwright)
+
+ #运行pytest -vs --headed --slowmo 1000 test_codegen.py
