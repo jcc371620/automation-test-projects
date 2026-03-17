@@ -1,0 +1,5 @@
+
+Get-ChildItem -Recurse -Directory | Where-Object { (Get-ChildItem $_.FullName).Count -eq 0 } | ForEach-Object { New-Item (Join-Path $_.FullName ".gitkeep") -ItemType File }
+# Get-ChildItem -Recurse -Directory：递归找到所有的文件夹。
+# Where-Object { ... -eq 0 }：筛选出那些里面没有任何文件的空文件夹。
+# New-Item ... -ItemType File：在这些空文件夹里创建一个名为 .gitkeep 的文件。
