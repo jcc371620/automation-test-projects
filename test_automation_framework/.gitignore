@@ -1,0 +1,22 @@
+# Python 字节码缓存
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest 缓存
+.pytest_cache/
+
+# 报告文件 (既然你有 reports 目录，通常不提交生成的运行结果)
+reports/xml/
+reports/html/
+
+# 环境变量敏感文件
+.env
+
+# 虚拟环境 (如果你在项目内创建了 venv)
+venv/
+.venv/
+
+# IDE 相关
+.vscode/
+.idea/
