@@ -25,7 +25,6 @@ def run(playwright: Playwright) -> None:
     browser.close()
 
 
-with sync_playwright() as playwright:
-    run(playwright)
+
 
  #运行pytest -vs --headed --slowmo 1000 test_codegen.py
